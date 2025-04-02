@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="gamest.css">
-
 </head>
 <body>
-
-    <h1><i><b>rock paper scissors</b></i></h1>
+    <h1><i><b>Rock Paper Scissors</b></i></h1>
     <main>
-<div class="choice" >
-    <div class="choices" id="rock">
-        <img src="rock.png" alt="">
-    </div>
-    <div class="choices" id="paper">
-        <img src="paper.png" alt="">
-    </div>
-    <div class="choices" id="scissor">
-        <img src="scissors.png" alt="">
-    </div>
-</div>
-</main>
+        <div class="choice">
+            <div class="choices" id="rock">
+                <img src="rock.png" alt="Rock">
+            </div>
+            <div class="choices" id="paper">
+                <img src="paper.png" alt="Paper">
+            </div>
+            <div class="choices" id="scissor">
+                <img src="scissors.png" alt="Scissors">
+            </div>
+        </div>
+    </main>
 
-<div class="scoreBord">
-    <div class="score">
-        <p id="users">0</p>
-        <p>you</p>
+    <div class="scoreBord">
+        <div class="score">
+            <p id="users">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comps">0</p>
+            <p>Computer</p>
+        </div>
     </div>
-    <div class="score">
-        <p id="comps">0</p>
-        <p>comp</p>
+
+    <div class="msg-contener">
+        <div id="msg">Play! It's your turn</div>
     </div>
-</div>
+
+    <div class="controls">
+        <button class="btn" id="resetBtn">Reset Game</button>
+        <button class="btn" id="toggleSound">🔊 Sound On</button>
     </div>
-    <div class="msg-contener" id="msg">play its your turn</div>
-    <script src ="game.js">
-    </script>
+
+    <div class="game-history">
+        <h2>Game History</h2>
+        <ul class="history-list" id="historyList"></ul>
+    </div>
+
+    <audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/1434/1434-preview.mp3"></audio>
+    <audio id="loseSound" src="https://assets.mixkit.co/active_storage/sfx/1433/1433-preview.mp3"></audio>
+    <audio id="drawSound" src="https://assets.mixkit.co/active_storage/sfx/1432/1432-preview.mp3"></audio>
+
+    <script src="game.js"></script>
 </body>
 </html>
